@@ -6,10 +6,10 @@ services:
       resources:
         limits:
           cpus: '2'
-          memory: 256M
+          memory: 128M
         reservations:
           cpus: '0.05'
-          memory: 128M
+          memory: 64M
      ports:
        - '6379:6379'
      restart: on-failure
