@@ -1,26 +1,43 @@
+version: "3"
 services:
    redis: 
      image: redislabs/redismod
+     deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 256M
+        reservations:
+          cpus: '0.05'
+          memory: 128M
      ports:
        - '6379:6379'
-     restart: on-failure 
+     restart: on-failure
+     network_mode: "host" 
    redisinsight:
     image: redislabs/redisinsight:latest
     ports:
     - '8001:8001'
+    network_mode: "host"
    web:
     build: .
-    mem_limit: 256m
-    mem_reservation: 128M
-    cpus: 0.5
+    network_mode: "host"
+    deploy:
+     resources:
+      limits:
+       cpus: '2'
+       memory: 128M
+      reservations:
+       cpus: '0.05'
+       memory: 64M
     ports:
-      - "8080:5000"
+      - "5000:5000"
     volumes:
       - .:/code
     depends_on:
      - redis
     healthcheck:
-          test: curl --fail http://localhost:8080/ || exit 1
+          test: curl --fail http://localhost:5000/ || exit 1
           interval: 40s
           timeout: 30s
           retries: 5
