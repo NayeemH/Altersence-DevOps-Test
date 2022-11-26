@@ -1,0 +1,2 @@
+Nov 26, 2022 12:26:20 PM org.example.Main main
+SEVERE: exception:java.io.FileNotFoundException: input.txt (No such file or directory)

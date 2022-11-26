@@ -1,0 +1,6 @@
+Nov 26, 2022 12:01:39 PM Main main
+SEVERE: exception:java.lang.NumberFormatException: For input string: "6.0"
+Nov 26, 2022 12:03:14 PM Main main
+SEVERE: exception:java.lang.NumberFormatException: For input string: "6.0"
+Nov 26, 2022 12:04:26 PM Main main
+SEVERE: exception:java.lang.NumberFormatException: For input string: "6.0"

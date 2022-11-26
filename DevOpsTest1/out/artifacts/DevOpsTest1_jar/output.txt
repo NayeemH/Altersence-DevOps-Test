@@ -1,0 +1,10 @@
+5 is a prime number
+7 is a prime number
+8 is not a prime number
+9 is not a prime number
+10 is not a prime number
+6.0 is not a prime number
+88 is not a prime number
+91 is not a prime number
+20 is not a prime number
+21 is not a prime number
