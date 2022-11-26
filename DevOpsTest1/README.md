@@ -6,7 +6,7 @@ A source code of a test program written in java is provided here. We would like 
 ## Solution:
 
 ### Step 1:
-There was a logical error on Main.java that is, the numebrs in input.txt file are not similiar. There were both integer and double values. So to remove the error, firstly I parse all the data to Double and then cast the vaule to int. 
+There was a logical error on Main.java that is, the numebrs in input.txt file are not similiar. There were both integer and double values. So to remove the error, firstly need to parse all the data to Double and then cast the vaules to int. 
 
 ```
 String data = myReader.nextLine();
@@ -15,10 +15,10 @@ int value = ((int) xyz);
 ```
 
 ### Step 2: 
-For project building I set the build option Maven from Intellij IdE. This will generate a pom.xml file.
+For project building, set the build option Maven from Intellij IdE. This will generate a pom.xml file.
 
 ### Step 3: 
-Then I create a Dockerfile like this. 
+Then create a Dockerfile. 
 
 ```
 #Build Stage
@@ -39,16 +39,16 @@ EXPOSE 80
 ENTRYPOINT exec java $JAVA_OPTS -jar DevOpsTest1.jar
 ```
 
-I made the jar from artifacts so the entrypoint will execute the jar from out folder. I also copy the input.txt file into the work directory. This will successfully run the container.
+Make the jar from artifacts so the entrypoint will execute the jar from out folder. Also copy the input.txt file into the work directory. This will successfully run the container.
 
 ### Step 4:
-Then I build the docker image by running the following command from the same directory where dockerdfile stored
+Then build the docker image by running the following command from the same directory where dockerdfile stored
 ```
 docker build -t nayeemh67/devopstask1:v1 .
 ```
 
 ### Step 5:
-I run the container of this image nayeemh67/devopstask1 by running
+Run the container of this image nayeemh67/devopstask1 by running
 ```
 docker run nayeemh67/devopstask1:v1
 
