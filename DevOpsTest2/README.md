@@ -188,8 +188,8 @@ Traceback (most recent call last):
 redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
 127.0.0.1 - - [26/Nov/2022 18:37:00] "GET / HTTP/1.1" 500 -
 ```
-There was two exceptions.
-one is ```ConnectionRefusedError: [Errno 61] Connection refuse```
+This exceptions are given by redis.
+That is ```ConnectionRefusedError: [Errno 61] Connection refuse```
 This can occure for many reason such as:
 - ### Redis-Server is not started : 
     The most common reason for the connection refused error is that the Redis-Server is not started.
@@ -201,3 +201,5 @@ This can occure for many reason such as:
     Thus it is important to check the status of the port in the firewall configuration while troubleshooting the could not connect to Redis error.
 - ### Resource usage:
     Redis uses the main memory to store the data. Thus if the resource in the server is not sufficient for the process to run, it may get terminated abruptly.
+
+
